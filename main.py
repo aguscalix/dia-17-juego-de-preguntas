@@ -1,12 +1,12 @@
 from question_model import Pregunta
-from data import question_data
+from data import pregunta_datos
 from quiz_brain import CerebroPrueba
 
 question_bank = []
 
-for pregunta in question_data:
-    texto_pregunta = pregunta["text"]
-    texto_respuesta = pregunta["answer"]
+for pregunta in pregunta_datos:
+    texto_pregunta = pregunta["pregunta"]
+    texto_respuesta = pregunta["respuesta_correcta"]
     nueva_pregunta = Pregunta(texto_pregunta, texto_respuesta)
     question_bank.append(nueva_pregunta)
 
